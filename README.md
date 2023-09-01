@@ -5,7 +5,7 @@ three.jsの学習を兼ねて作成された<br>
 弓矢で的を打ち落とすゲームです。<br>
 three.jsのサンプルが欲しかった事から、英語のサイトを読み続けてできたものを公開しています。<br>
 
-＃ 実行方法
+# 実行方法
 実行はドールサイトのページか<br>
 GitHubPageから<br>
 https://etienu.github.io/usayumi/
