@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <title> - USAYUMI - ウサ弓的当て</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./css/index.css">
+    <!--
+    <script src="https://unpkg.com/three@0.148.0/build/three.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script src="https://unpkg.com/@esotericsoftware/spine-threejs@4.0.*/dist/iife/spine-threejs.js"></script>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.148.0/build/three.module.js" } }
+    </script>
+    
+    -->
+    <!--spine.とthree.jsのバージョン指定
+        0.148起動できない、144動く、143以下-2Dテクスチャが消える
+       -->
+    <script src="https://unpkg.com/three@0.148.0/build/three.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script src="https://unpkg.com/@esotericsoftware/spine-threejs@4.0.28/dist/iife/spine-threejs.js"></script>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.148.0/build/three.module.js" } }
+    </script>
+
+
+</head>
+
+<body>
+    <div id="gameAppframe" class="game-appframe">
+        <div id="gameframe" class="game-frame">
+            <canvas id="myCanvas" class="gameCanvas">
+        </canvas>
+        </div>
+
+
+        <div id="gameCtrlButtons" class="game-ControlButtons">
+            <div id="gameCtrlButtons-Fullscreen-Open" class="game-ControlButtons-Fullscreen-Open">
+                FullScreen
+            </div>
+            <div id="gameCtrlButtons-Fullscreen-Close" class="game-ControlButtons-Fullscreen-Close">
+                window
+            </div>
+        </div>
+
+    </div>
+
+    <!--
+
+    <div class="gm__debug-frame">
+        <div id="gmd-raypos" class="gm__df-rayposition">
+            rayposition : [0](0,0,0)-[1](0,0,0);
+        </div>
+        <div id="gmd-mousepos" class="gm__df-mouseposition">
+            mouseposition : [xy](0,0)-[wh](0,0);
+        </div>
+    </div>
+    -->
+    <script type="module" src="start.js"></script>
+
+    <!--
+    <script>
+const btnOpen = document.querySelector("#gameCtrlButtons-Fullscreen-Open"); // フルスクリーン化ボタン
+const btnClose = document.querySelector("#gameCtrlButtons-Fullscreen-Close"); // フルスクリーンキャンセルボタン
+btnClose.style.display = "none"; // CloseをOFF
+
+window.onload = () => {
+    const album = document.querySelector("#gameAppframe"); // フルスクリーンにするオブジェクト
+
+    //--------------------------------
+    // [event] 開始ボタンをクリック
+    //--------------------------------
+    btnOpen.addEventListener("click", () => {
+        if (!enabledFullScreen()) {
+            alert("フルスクリーンに対応していません");
+            return (false);
+        }
+        // フルスクリーンを開始
+        goFullScreen(album);
+    });
+
+    //--------------------------------
+    // [event] 閉じるボタンをクリック
+    //--------------------------------
+    btnClose.addEventListener("click", () => {
+        // フルスクリーンを解除
+        cancelFullScreen(album);
+    });
+
+    //--------------------------------
+    // フルスクリーンイベント
+    //--------------------------------
+    eventFullScreen(() => {
+        // ボタンを入れ替える
+        if (getFullScreenObject()) {
+            //console.log("フルスクリーン開始");
+            btnOpen.style.display = "none"; // OpenをOFF
+            btnClose.style.display = "block"; // CloseをON
+        } else {
+            //console.log("フルスクリーン終了");
+            btnClose.style.display = "none"; // CloseをOFF
+            btnOpen.style.display = "block"; // OpenをON
+        }
+    });
+};
+
+//----------------------------------------
+// フルスクリーン開始/終了時のイベント設定
+//
+// @param {function} callback
+//----------------------------------------
+function eventFullScreen(callback) {
+    document.addEventListener("fullscreenchange", callback, false);
+    document.addEventListener("webkitfullscreenchange", callback, false);
+    document.addEventListener("mozfullscreenchange", callback, false);
+    document.addEventListener("MSFullscreenChange", callback, false);
+}
+
+//----------------------------------------
+// フルスクリーンが利用できるか
+//
+// @return {boolean}
+//----------------------------------------
+function enabledFullScreen() {
+    return (
+        document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen || document.msFullscreenEnabled
+    );
+}
+
+//----------------------------------------
+// フルスクリーンにする
+//
+// @param {object} [element]
+//----------------------------------------
+function goFullScreen(element = null) {
+    const doc = window.document;
+    const docEl = (element === null) ? doc.documentElement : element;
+    let requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+    requestFullScreen.call(docEl);
+}
+
+//----------------------------------------
+// フルスクリーンをやめる
+//----------------------------------------
+function cancelFullScreen() {
+    const doc = window.document;
+    const cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+    cancelFullScreen.call(doc);
+}
+
+//----------------------------------------
+// フルスクリーン中のオブジェクトを返却
+//----------------------------------------
+function getFullScreenObject() {
+    const doc = window.document;
+    const objFullScreen = doc.fullscreenElement || doc.mozFullScreenElement || doc.webkitFullscreenElement || doc.msFullscreenElement;
+    return (objFullScreen);
+}
+    </script>
+-->
+
+</body>
+
+</html>
