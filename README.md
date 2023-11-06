@@ -7,8 +7,7 @@ three.jsの学習を兼ねて作成された<br>
 作成したものを公開しています。<br>
 
 # 実行方法
-実行はドールサイトのページか<br>
-GitHubPageから<br>
+実行はGitHubPageから<br>
 https://etienu.github.io/usayumi/
 
 ・表示されない場合はF5更新<br>
